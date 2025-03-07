@@ -13,14 +13,14 @@ if (!publishableKey) {
 
 export default function RootLayout() {
   return (
-    // <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey} >
-    //   <ClerkLoaded>
+    <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey} >
+      <ClerkLoaded>
         <SafeAreaProvider>
           <SafeAreaView style={{ flex: 1, backgroundColor: "black" }} >
             <Stack screenOptions={{ headerShown: false }} />
           </SafeAreaView>
         </SafeAreaProvider>
-    //   </ClerkLoaded>
-    // </ClerkProvider>
+       </ClerkLoaded>
+     </ClerkProvider>
   );
 }
